@@ -1,0 +1,106 @@
+// Definición de variables de colores
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$accent-color: #ffc107;
+$text-color: #333;
+
+// Uso de las variables
+body {
+  color: $text-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, 'Roboto', Arial,
+    sans-serif;
+  color: $text-color;
+}
+
+.navbar {
+  font-size: 25px;
+}
+
+.navbar-nav {
+  .nav-link {
+    transition: all 0.3s ease;
+    &:hover {
+      color: #007bff;
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+  }
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.card-body {
+  &:hover {
+    $color: $primary-color;
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+  }
+}
+
+h3 {
+  padding-left: 30px;
+  text-decoration: underline;
+}
+
+.sec {
+  width: 100%;
+  height: 20%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+.carousel {
+  border: 4px solid #111213; // Agrega un borde azul de 4px de ancho
+  border-radius: 10px; // Agrega esquinas redondeadas con un radio de 10px
+}
+
+//Uso de comparadores de operaciones
+$screen-size: 1200px;
+
+@if $screen-size >= 1200px {
+  .carousel {
+    width: 1140px;
+  }
+} @else if $screen-size >= 992px {
+  .carousel {
+    width: 960px;
+  }
+}
+footer {
+  display: flex;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+ul {
+  a {
+    transition: all 0.3s ease; // Agrega una transición suave
+    text-decoration: none; // Elimina el subrayado predeterminado
+
+    &:hover {
+      color: #007bff !important; // Cambia el color del texto al pasar el mouse
+      text-decoration: underline; // Agrega un subrayado
+      transform: scale(1.1); // Agranda ligeramente el enlace al pasar el mouse
+    }
+  }
+}
+
+
+@media (max-width: 427px) {
+  .escudo {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+ 
